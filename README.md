@@ -2,11 +2,6 @@
 
 Motor controller for blackout curtains, built on an ESP8266 with an Android app as the remote.
 
-
-## Architecture 
-<br>
-<img width="1837" height="2326" alt="image" src="https://github.com/user-attachments/assets/585d1c7b-2b4e-41d6-a547-fdeaeea8930f" />
-
 ## Hardware
 
 - **MCU**: NodeMCU v2 (ESP8266)
@@ -48,9 +43,6 @@ Timezone is set via the POSIX string `EET-2EEST,M3.5.0/3,M10.5.0/4` (Romania, ha
 Requires Android with local WiFi access to the ESP. The ESP's IP address is configured in the Settings screen and saved across restarts.
 
 **Main screen**
-<br>
-<img width="384" height="712" alt="image" src="https://github.com/user-attachments/assets/f1d73258-ce07-4a1c-8f51-d3651de3cd8e" />
-
 - Position slider (0% = open, 100% = closed) — updates on every status refresh
 - Current motor position shown in both percentage and raw steps
 - Manual step buttons with configurable step count for calibration
@@ -58,9 +50,6 @@ Requires Android with local WiFi access to the ESP. The ESP's IP address is conf
 - Status refreshes every 3 seconds automatically
 
 **Settings screen**
-<br>
-<img width="383" height="724" alt="image" src="https://github.com/user-attachments/assets/14771030-074e-42cd-9d1b-c3c176929fb4" />
-
 - ESP IP address field
 - Schedule toggle: *Sunrise/Sunset* (fetched from api.sunrise-sunset.org using the phone's timezone) or *Manual* (user-picked open/close times)
 - Save & Sync pushes whichever times are active to the ESP
