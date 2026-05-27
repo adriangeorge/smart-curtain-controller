@@ -5,7 +5,7 @@ Motor controller for blackout curtains, built on an ESP8266 with an Android app 
 
 ## Architecture 
 <br>
-<img width="1837" height="2326" alt="image" src="https://github.com/user-attachments/assets/70a697ac-5a9c-4533-bf15-1372dccb683d" />
+<img width="1837" height="2326" alt="image" src="https://github.com/user-attachments/assets/585d1c7b-2b4e-41d6-a547-fdeaeea8930f" />
 
 ## Hardware
 
