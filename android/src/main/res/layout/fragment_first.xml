@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Error -->
+
+        <TextView
+            android:id="@+id/status_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorError"
+            android:visibility="gone" />
+
+        <!-- Status table -->
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:stretchColumns="1">
+
+            <TableRow android:padding="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="16dp"
+                    android:text="@string/label_position"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:padding="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="16dp"
+                    android:text="@string/label_motor_pos"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text_motor_pos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:padding="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="16dp"
+                    android:text="@string/label_state"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:padding="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="16dp"
+                    android:text="@string/label_sunrise"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text_sunrise"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+            <TableRow android:padding="4dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="16dp"
+                    android:text="@string/label_sunset"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/text_sunset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </TableRow>
+
+        </TableLayout>
+
+        <!-- Position slider -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <SeekBar
+                android:id="@+id/slider_position"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="100"
+                android:progress="0" />
+
+            <TextView
+                android:id="@+id/text_slider_percent"
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:gravity="end"
+                android:text="0%"
+                android:textAppearance="?attr/textAppearanceBodyMedium" />
+
+        </LinearLayout>
+
+        <!-- Refresh + Settings -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/button_refresh"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/action_refresh" />
+
+                <TextView
+                    android:id="@+id/dot_refresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top|end"
+                    android:layout_margin="6dp"
+                    android:text="●"
+                    android:textColor="?attr/colorPrimary"
+                    android:textSize="8sp"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/button_settings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/action_settings" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_sync_sun"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/action_sync_sun" />
+
+        <!-- Divider -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/colorOutline" />
+
+        <!-- Home controls -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_set_home"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/action_set_home" />
+
+            <Button
+                android:id="@+id/button_go_home"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/action_go_home" />
+
+        </LinearLayout>
+
+        <!-- End controls -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_set_end"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="@string/action_set_end" />
+
+            <Button
+                android:id="@+id/button_go_end"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/action_go_end" />
+
+        </LinearLayout>
+
+        <!-- Divider -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/colorOutline" />
+
+        <!-- Manual step calibration: ◄  [step count]  ► -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_step_back"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_step_back" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:hint="@string/hint_steps">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edit_step_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:text="100" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/button_step_forward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/action_step_forward" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">CurtainController</string>
+    <string name="action_settings">Details</string>
+    <!-- Fragment labels shown in the toolbar -->
+    <string name="first_fragment_label">Status</string>
+    <string name="second_fragment_label">Settings</string>
+    <!-- kept for nav compat -->
+    <string name="next">Settings</string>
+    <string name="previous">Back</string>
+
+    <!-- Status fragment -->
+    <string name="label_position">Range (steps)</string>
+    <string name="label_motor_pos">Motor Position</string>
+    <string name="label_state">State</string>
+    <string name="label_sunrise">Sunrise</string>
+    <string name="label_sunset">Sunset</string>
+    <string name="action_refresh">Refresh</string>
+    <string name="action_sync_sun">Sync Times</string>
+    <string name="hint_esp_ip">ESP IP address</string>
+    <string name="label_time_schedule">Schedule</string>
+    <string name="radio_api_times">Sunrise / Sunset</string>
+    <string name="radio_manual_times">Manual</string>
+    <string name="label_open_at">Open at</string>
+    <string name="label_close_at">Close at</string>
+    <string name="action_save_sync">Save &amp; Sync</string>
+
+    <!-- Settings fragment -->
+    <string name="header_key">Option</string>
+    <string name="header_value">Value</string>
+    <string name="action_back">Back</string>
+
+    <!-- Position controls -->
+    <string name="action_set_home">Set Open</string>
+    <string name="action_go_home">Open</string>
+    <string name="action_set_end">Set Closed</string>
+    <string name="action_go_end">Close</string>
+
+    <!-- Manual step calibration -->
+    <string name="action_step_back">&#9664;</string>
+    <string name="action_step_forward">&#9654;</string>
+    <string name="hint_steps">Steps</string>
+
+    <!-- Errors -->
+    <string name="error_connection">Connection failed</string>
+</resources>
