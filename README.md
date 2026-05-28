@@ -6,7 +6,7 @@ Motor controller for blackout curtains, built on an ESP8266 with an Android app 
 
 - **MCU**: NodeMCU v2 (ESP8266)
 - **Motor**: Creality 42-40 stepper (1.8°/step, 200 steps/rev)
-- **Driver**: A4988 or compatible — set MS1/MS2/MS3 jumpers to match `MICROSTEPS` in the code (default 16)
+- **Driver**: A4988
 - **Wiring**:
   | Signal | NodeMCU pin |
   |--------|-------------|
